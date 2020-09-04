@@ -8,7 +8,7 @@
 
 <form id="save-custom-css-form" action="options.php" method="post" class="wonder-general-form">
     <?php settings_fields('wonder-custom-css-options'); ?>
-    <?php do_settings_sections('arifra_wonder_css'); ?> <!-- Here we place the id page where all the options will be placed-->
+    <?php do_settings_sections('arifra_premium_css'); ?> <!-- Here we place the id page where all the options will be placed-->
     <?php submit_button(); ?>
 
 </form>

@@ -25,7 +25,7 @@
 
 <form action="options.php" method="post" class="wonder-general-form">
     <?php settings_fields('wonder-settings-group'); ?>
-    <?php do_settings_sections('arifra_wonder'); ?> <!-- Here we place the id page where all the options will be placed-->
+    <?php do_settings_sections('arifra_premium'); ?> <!-- Here we place the id page where all the options will be placed-->
     <?php submit_button('Save Changes', 'primary', 'btnSubmit'); ?>
 
 </form>

@@ -11,20 +11,24 @@
 
 function wonder_add_admin_page(){
     //Generate Wonder Blog Admin Page
-    add_menu_page('Wonder Theme Options', 'Wonder', 'manage_options', 'arifra_wonder', 'wonder_theme_create_page', get_template_directory_uri() . '/img/blog-icon.png', 110 );
+    add_menu_page('Wonder Theme Options', 'Wonder', 'manage_options', 'arifra_premium', 'wonder_theme_create_page', get_template_directory_uri() . '/img/blog-icon.png', 110 );
 
-	//Generate Wonder Admin Sub Pages
-	add_submenu_page( 'arifra_wonder', 'Wonder Sidebar Options', 'Sidebar', 'manage_options', 'arifra_wonder', 'Wonder_theme_create_page' );
-	add_submenu_page( 'arifra_wonder', 'Wonder Theme Options', 'Theme Options', 'manage_options', 'arifra_wonder_theme', 'wonder_theme_support_page' );
-	add_submenu_page( 'arifra_wonder', 'Wonder Contact Form', 'Contact Form', 'manage_options', 'arifra_wonder_theme_contact', 'wonder_contact_form_page' );
-	add_submenu_page( 'arifra_wonder', 'Wonder CSS Options', 'Custom CSS', 'manage_options', 'arifra_wonder_css', 'wonder_theme_settings_page');
-	
+    //Generate Wonder Blog Sub Pages
+    add_submenu_page('arifra_premium', 'Wonder Sidebar Options', 'Sidebar Settings', 'manage_options', 'arifra_premium', 'wonder_theme_create_page');
+
+    add_submenu_page('arifra_premium', 'Wonder Theme Options', 'Theme Settings', 'manage_options', 'arifra_premium_theme', 'wonder_theme_support_page');
+
+    add_submenu_page('arifra_premium', 'Wonder Contact Form', 'Contact Forms', 'manage_options', 'arifra_premium_contact', 'wonder_contact_form_page');
+
+    add_submenu_page('arifra_premium', 'Wonder CSS Options', 'Custom CSS', 'manage_options', 'arifra_premium_css', 'wonder_theme_settings_page');
+
 }
 
-    add_action('admin_menu', 'wonder_add_admin_page');
+add_action('admin_menu', 'wonder_add_admin_page');
 
     //Activate Custom Settings
     add_action( 'admin_init', 'wonder_custom_settings' );
+
 
 function wonder_custom_settings() {
 
@@ -38,15 +42,15 @@ function wonder_custom_settings() {
     register_setting( 'wonder-settings-group', 'facebook_handler' );
     register_setting( 'wonder-settings-group', 'gplus_handler' );
 
-    add_settings_section( 'wonder-sidebar-options', 'Sidebar Options', 'wonder_sidebar_options', 'arifra_wonder' );
+    add_settings_section( 'wonder-sidebar-options', 'Sidebar Options', 'wonder_sidebar_options', 'arifra_premium' );
 
-    add_settings_field('sidebar-profile-picture', 'Profile Picture', 'wonder_sidebar_profile', 'arifra_wonder', 'wonder-sidebar-options');
+    add_settings_field('sidebar-profile-picture', 'Profile Picture', 'wonder_sidebar_profile', 'arifra_premium', 'wonder-sidebar-options');
 
-    add_settings_field('sidebar-name', 'Full Name', 'wonder_sidebar_name', 'arifra_wonder', 'wonder-sidebar-options');
-    add_settings_field('sidebar-description', 'Description', 'wonder_sidebar_description', 'arifra_wonder', 'wonder-sidebar-options');
-    add_settings_field('sidebar-twitter', 'Twitter', 'wonder_sidebar_twitter', 'arifra_wonder', 'wonder-sidebar-options');
-    add_settings_field('sidebar-facebook', 'Facebook', 'wonder_sidebar_facebook', 'arifra_wonder', 'wonder-sidebar-options');
-    add_settings_field('sidebar-gplus', 'Google+', 'wonder_sidebar_gplus', 'arifra_wonder', 'wonder-sidebar-options');
+    add_settings_field('sidebar-name', 'Full Name', 'wonder_sidebar_name', 'arifra_premium', 'wonder-sidebar-options');
+    add_settings_field('sidebar-description', 'Description', 'wonder_sidebar_description', 'arifra_premium', 'wonder-sidebar-options');
+    add_settings_field('sidebar-twitter', 'Twitter', 'wonder_sidebar_twitter', 'arifra_premium', 'wonder-sidebar-options');
+    add_settings_field('sidebar-facebook', 'Facebook', 'wonder_sidebar_facebook', 'arifra_premium', 'wonder-sidebar-options');
+    add_settings_field('sidebar-gplus', 'Google+', 'wonder_sidebar_gplus', 'arifra_premium', 'wonder-sidebar-options');
 
     //THEME SUPPORT OPTIONS
 
@@ -54,28 +58,28 @@ function wonder_custom_settings() {
     register_setting('wonder-theme-support', 'custom_header' );
     register_setting('wonder-theme-support', 'custom_background' );
 
-    add_settings_section('wonder-theme-options', 'Theme Options', 'wonder_theme_options', 'arifra_wonder_theme' );
+    add_settings_section('wonder-theme-options', 'Theme Options', 'wonder_theme_options', 'arifra_premium_theme' );
 
-    add_settings_field('post-formats', 'Post Formats', 'wonder_post_formats', 'arifra_wonder_theme', 'wonder-theme-options' );
-    add_settings_field('custom-header', 'Custom Header', 'wonder_custom_header', 'arifra_wonder_theme', 'wonder-theme-options' );
-    add_settings_field('custom-background', 'Custom Background', 'wonder_custom_background', 'arifra_wonder_theme', 'wonder-theme-options' );
+    add_settings_field('post-formats', 'Post Formats', 'wonder_post_formats', 'arifra_premium_theme', 'wonder-theme-options' );
+    add_settings_field('custom-header', 'Custom Header', 'wonder_custom_header', 'arifra_premium_theme', 'wonder-theme-options' );
+    add_settings_field('custom-background', 'Custom Background', 'wonder_custom_background', 'arifra_premium_theme', 'wonder-theme-options' );
 
     
     // CONTACT FORM OPTIONS
 
     register_setting( 'wonder-contact-options', 'activate_contact');
 
-    add_settings_section( 'wonder-contact-section', 'Contact Form', 'wonder_contact_section', 'arifra_wonder_contact' );
+    add_settings_section( 'wonder-contact-section', 'Contact Form', 'wonder_contact_section', 'arifra_premium_contact' );
 
-    add_settings_field('activate-form', 'Activate Contact Form', 'wonder_activate_contact', 'arifra_wonder_contact', 'wonder-contact-section');
+    add_settings_field('activate-form', 'Activate Contact Form', 'wonder_activate_contact', 'arifra_premium_contact', 'wonder-contact-section');
 
     // CUSTOM CSS OPTIONS
 
     register_setting( 'wonder-custom-css-options', 'wonder_css', 'wonder_sanitize_custom_css' );
 
-    add_settings_section( 'wonder-custom-css-section', 'Custom CSS', 'wonder_custom_css_section_callback', 'arifra_wonder_css' );
+    add_settings_section( 'wonder-custom-css-section', 'Custom CSS', 'wonder_custom_css_section_callback', 'arifra_premium_css' );
     
-    add_settings_field('custom-css', 'Insert your Custom CSS', 'wonder_custom_css_callback', 'arifra_wonder_css', 'wonder-custom-css-section' );
+    add_settings_field('custom-css', 'Insert your Custom CSS', 'wonder_custom_css_callback', 'arifra_premium_css', 'wonder-custom-css-section' );
     
     
 
@@ -111,7 +115,7 @@ function wonder_sidebar_description(){
     echo '<input type="text" name="user_description" value="'.$userDescription.'" "placeholder="Description"><p class="description">Tell us something about you!</p>';
 }
 
-//Input Social Media
+    //Input Social Media
 function wonder_sidebar_twitter(){
     $twitter = esc_attr(get_option('twitter_handler')); 
     echo '<input type="text" name="twitter_handler" value="'.$twitter.'" placeholder="Twitter name" ><p class="description">Input your Twitter name without the @ character</p>';
@@ -127,22 +131,21 @@ function wonder_sidebar_gplus(){
     echo '<input type="text" name="gplus_handler" value="'.$gplus.'" placeholder="Google+ url" >';
 }
 
-//Sanitization settings
+    //Sanitization settings
 function wonder_sanitize_twitter_handler($input){
     $output = sanitize_text_field($input);
     $output = str_replace('@', '', $output);
     return $output;
 
 }
-
-//Sanitize CSS text area
+    //Sanitize CSS text area
 function wonder_sanitize_custom_css($input){
     $output = esc_textarea($input);
     return $output;
 
 }
 
-//CREATE PAGES
+ //CREATE PAGES
 function wonder_theme_create_page() {
     // generate Blog Admin Page
     require_once( get_template_directory() . '/inc/templates/wonder-admin.php' );
@@ -203,7 +206,7 @@ function wonder_contact_section() {
 function wonder_activate_contact() {
 	$options = get_option( 'activate_contact' );
 	$checked = ( @$options == 1 ? 'checked' : '' );
-	echo '<label><input type="checkbox" id="custom_header" name="activate_contact" value="1" '.$checked.' /></label>'; /*Chec this if its id= activate_contact or custom_header*/
+	echo '<input type="checkbox" id="activate_contact" name="activate_contact" value="1" '.$checked.' />';
 }
 
 
@@ -215,7 +218,7 @@ function wonder_custom_css_section_callback() {
 
 function wonder_custom_css_callback() {
     $css = get_option( 'wonder_css' );
-    $css = ( empty($css) ? '/* Sunset Theme Custom CSS */' : $css );
+    $css = ( empty($css) ? '/* wonder Theme Custom CSS */' : $css );
     echo '<div id="customCSS">'.$css.'</div><textarea id="wonder_css" name="wonder_css" style="display:none; visibility:hidden">'.$css.'</textarea>';
     
 }

@@ -8,7 +8,7 @@
 
 <form action="options.php" method="post" class="wonder-general-form">
     <?php settings_fields('wonder-theme-support'); ?>
-    <?php do_settings_sections('arifra_wonder_theme'); ?> <!-- Here we place the id page where all the options will be placed-->
+    <?php do_settings_sections('arifra_premium_theme'); ?> <!-- Here we place the id page where all the options will be placed-->
     <?php submit_button(); ?>
 
 </form>
