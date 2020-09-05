@@ -29,7 +29,7 @@ jQuery(document).ready( function($){
 
     $('#remove-picture').on('click', function(e){
         e.preventDefault();
-        var answer = confirm("Are your sure you want to remove your Profiel Picture?");
+        var answer = confirm("Are your sure you want to remove your Profile Picture?");
         if( answer == true ){
             $('#profile-picture').val('');
             $('.wonder-general-form').submit();

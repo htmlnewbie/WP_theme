@@ -8,7 +8,7 @@
 
 <form action="options.php" method="post" class="wonder-general-form">
     <?php settings_fields('wonder-contact-options'); ?>
-    <?php do_settings_sections('arifra_wonder_contact'); ?> <!-- Here we place the id page where all the options will be placed-->
+    <?php do_settings_sections('arifra_premium_contact'); ?> <!-- Here we place the id page where all the options will be placed-->
     <?php submit_button(); ?>
 
 </form>
