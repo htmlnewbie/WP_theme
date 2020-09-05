@@ -13,6 +13,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 <head>
+<<<<<<< HEAD
 
 	<title><?php bloginfo('name'); wp_title(); ?></title>
 	<meta name="description" content="<?php bloginfo('description') ?>">
@@ -20,6 +21,10 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+=======
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>>>>>>> c89922d33e2ba37592bd805622ebd43f10a8bb0b
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- This will make the  pinback function to only work with single pages (single posts, etc) -->
     <?php if(is_singular() && pings_open( get_queried_object() ) ): ?>
@@ -28,6 +33,7 @@
 
     <?php wp_head(); ?>
 
+<<<<<<< HEAD
 </head>
 
 <body <?php body_class(); ?> >
@@ -54,4 +60,12 @@
                 </div><!-- .col-xs-12 -->
             </div><!-- row -->
         </div><!--.container-fluid -->
+=======
+    <title>Wonder Blog</title>
+</head>
+
+<body <?php body_class(); ?> >
+    
+
+>>>>>>> c89922d33e2ba37592bd805622ebd43f10a8bb0b
 

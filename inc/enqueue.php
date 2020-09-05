@@ -49,8 +49,11 @@ add_action( 'admin_enqueue_scripts', 'wonder_load_admin_scripts' );
 function wonder_load_scripts() {
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.5.2', 'all' );
     wp_enqueue_style( 'wonder', get_template_directory_uri() . '/css/wonder.css', array(), '1.0.0', 'all' );
+<<<<<<< HEAD
     wp_enqueue_style('Poppins', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
+=======
+>>>>>>> c89922d33e2ba37592bd805622ebd43f10a8bb0b
 
 
     wp_deregister_script('jquery');
