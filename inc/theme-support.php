@@ -86,6 +86,7 @@ function wonder_posted_footer(){
     return '<div class="post-footer-container"><div class="row"><div class="col-xs-12 col-sm-6">'.get_the_tag_list('<div class="tags-list"><span class="wonder-icon wonder-price-tag"></span>', ' ', '</div>').'</div><div class="col-xs-12 col-sm-6 text-right">'.$comments.'</div></div></div>';
 }
 
+<<<<<<< HEAD
 function wonder_get_attachment(){
 	
 	$output = '';
@@ -122,3 +123,33 @@ function wonder_get_embedded_media($type = array() ){
 
 ?>
 
+=======
+function wonder_get_attachment() {
+
+    
+    $output = '';
+    if(has_post_thumbnail() ) : 
+        $output = wp_get_attachment_url( get_post_thumbnail_id(get_the_id() ) );
+    else: 
+        $attachments = get_posts(array(
+            'post_type' => 'attachment',
+            'posts_per_page' => 1,
+            'post_parent' => get_the_ID()
+        ) );
+    
+        if($attachments):
+            foreach($attachments as $attachment):
+                $output = wp_get_attachment_url($attachment->ID);
+            endforeach;
+        endif;
+
+        wp_reset_postdata();
+
+    endif;
+    return $output;
+
+};
+
+
+?>
+>>>>>>> 7fb0adf1bc1e7e27003c0b44f62219b1736a1a4b

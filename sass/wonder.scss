@@ -219,8 +219,13 @@ h1 { font-size: 48px ; font-weight: 400;
 	margin-top: 50px;
 	.entry-header {
 		height: 480px;
+<<<<<<< HEAD
 		@extend %text-shadow;
 		position: relative;
+=======
+		position: relative;
+		@extend %text-shadow;
+>>>>>>> 7fb0adf1bc1e7e27003c0b44f62219b1736a1a4b
 	}
 	h1, .entry-meta, .entry-header{
 		color: #fff;
@@ -233,6 +238,7 @@ h1 { font-size: 48px ; font-weight: 400;
 
 .entry-excerpt {
 	&.image-caption {
+<<<<<<< HEAD
 		@extend %background-gradient;	
 		position: absolute; left: 0; bottom: -15px; right: 0;
 		p{ margin: 15px 0;}
@@ -258,4 +264,11 @@ h1 { font-size: 48px ; font-weight: 400;
 	.entry-content{
 		iframe{ width: 100%; height: 166px;}
 	}
+=======
+		@extend %background-gradient;
+		position: absolute; left: 0; bottom: 0px; right: 0;
+		p{ margin: 40px 0;}
+				
+	}
+>>>>>>> 7fb0adf1bc1e7e27003c0b44f62219b1736a1a4b
 }

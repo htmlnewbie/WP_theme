@@ -51,6 +51,16 @@ function wonder_load_scripts() {
     wp_enqueue_style( 'wonder', get_template_directory_uri() . '/css/wonder.css', array(), '1.0.0', 'all' );
     wp_enqueue_style('Poppins', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    wp_enqueue_style('Poppins', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+=======
+>>>>>>> c89922d33e2ba37592bd805622ebd43f10a8bb0b
+>>>>>>> 9bdd6301fe573493be721dcd92b1f84f12007e61
+>>>>>>> 7fb0adf1bc1e7e27003c0b44f62219b1736a1a4b
 
 
     wp_deregister_script('jquery');
