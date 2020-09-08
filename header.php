@@ -13,13 +13,27 @@
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 <head>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9bdd6301fe573493be721dcd92b1f84f12007e61
 
 	<title><?php bloginfo('name'); wp_title(); ?></title>
 	<meta name="description" content="<?php bloginfo('description') ?>">
 
+<<<<<<< HEAD
     <meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+=======
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+=======
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>>>>>>> c89922d33e2ba37592bd805622ebd43f10a8bb0b
+>>>>>>> 9bdd6301fe573493be721dcd92b1f84f12007e61
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- This will make the  pinback function to only work with single pages (single posts, etc) -->
     <?php if(is_singular() && pings_open( get_queried_object() ) ): ?>
@@ -28,6 +42,38 @@
 
     <?php wp_head(); ?>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</head>
+
+<body <?php body_class(); ?> >
+        <div class="container-fluid container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="header-container background-image text-center" style="background-image: url(<?php header_image();?>);" >
+
+                        <div class="header-content table">
+							<div class="table-cell">
+                            	<h1 class="site-title wonder-icon">
+									<!-- <span class="wonder-logo"></span>  Here goes the logo that was downloaded with the font icons. The logo will appear just by activating the class wonder-logo in this span -->
+									<span><?php bloginfo('name'); ?></span>
+																	
+								</h1> <!-- Place the name of the title inside a span with class of hide to hide it and show the logo instead-->
+								<h2 class="site-description"><?php bloginfo('description') ?></h2>
+							</div>
+                        </div><!-- .header-contenet -->
+
+                        <div class="nav-container"></div><!-- nav-container -->
+
+                    </div><!-- .header-container -->
+
+                </div><!-- .col-xs-12 -->
+            </div><!-- row -->
+        </div><!--.container-fluid -->
+=======
+    <title>Wonder Blog</title>
+>>>>>>> 9bdd6301fe573493be721dcd92b1f84f12007e61
 </head>
 
 <body <?php body_class(); ?> >
@@ -65,7 +111,11 @@
 
                     </header><!-- .header-container -->
 
+<<<<<<< HEAD
                 </div><!-- .col-xs-12 -->
             </div><!-- row -->
         </div><!--.container-fluid -->
+=======
+>>>>>>> c89922d33e2ba37592bd805622ebd43f10a8bb0b
+>>>>>>> 9bdd6301fe573493be721dcd92b1f84f12007e61
 
