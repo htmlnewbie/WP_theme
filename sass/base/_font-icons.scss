@@ -1,0 +1,162 @@
+/*
+    @package Wonder Blog Theme
+
+*/
+
+/*
+
+    Font Icons
+-----------------------------------
+*/
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?g1q9cu') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?g1q9cu') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?g1q9cu##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.wonder-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wonder-audio {
+  &:before {
+    content: $wonder-audio; 
+  }
+}
+.wonder-chevron-left {
+  &:before {
+    content: $wonder-chevron-left; 
+  }
+}
+.wonder-chevron-right {
+  &:before {
+    content: $wonder-chevron-right; 
+  }
+}
+.wonder-close {
+  &:before {
+    content: $wonder-close; 
+  }
+}
+.wonder-comment {
+  &:before {
+    content: $wonder-comment;     
+    color: #929292;
+  }
+}
+.wonder-link {
+  &:before {
+    content: $wonder-link;     
+    color: #929292;
+  }
+}
+.wonder-loading {
+  &:before {
+    content: $wonder-loading;     
+    color: #ccc;
+  }
+}
+.wonder-menu {
+  &:before {
+    content: $wonder-menu; 
+  }
+}
+.wonder-pencil {
+  &:before {
+    content: $wonder-pencil; 
+  }
+}
+.wonder-pics {
+  &:before {
+    content: $wonder-pics;     
+    color: #929292;
+  }
+}
+.wonder-search1 {
+  &:before {
+    content: $wonder-search1;     
+    color: #bcbcbc;
+  }
+}
+.wonder-share {
+  &:before {
+    content: $wonder-share;     
+    color: #929292;
+  }
+}
+.wonder-tag {
+  &:before {
+    content: $wonder-tag;     
+    color: #929292;
+  }
+}
+.wonder-video {
+  &:before {
+    content: $wonder-video;     
+    color: #929292;
+  }
+}
+.wonder-price-tag {
+  &:before {
+    content: $wonder-price-tag; 
+  }
+}
+.wonder-search {
+  &:before {
+    content: $wonder-search; 
+  }
+}
+.wonder-share2 {
+  &:before {
+    content: $wonder-share2; 
+  }
+}
+.wonder-mail4 {
+  &:before {
+    content: $wonder-mail4; 
+  }
+}
+.wonder-facebook2 {
+  &:before {
+    content: $wonder-facebook2; 
+  }
+}
+.wonder-instagram {
+  &:before {
+    content: $wonder-instagram; 
+  }
+}
+.wonder-whatsapp {
+  &:before {
+    content: $wonder-whatsapp; 
+  }
+}
+.wonder-spotify {
+  &:before {
+    content: $wonder-spotify; 
+  }
+}
+.wonder-twitter {
+  &:before {
+    content: $wonder-twitter; 
+  }
+}
+
