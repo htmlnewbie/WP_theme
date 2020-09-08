@@ -77,7 +77,7 @@ function wonder_posted_footer(){
         } else {
             $comments = __('1 Comment');
         }
-        $coments = '<a class="comments-link" href="'.get_comments_link().'">'.$comments.'<span class="wonder-icon wonder-comment"></span></a>'; 
+        $comments = '<a class="comments-link" href="'.get_comments_link().'">'.$comments.'<span class="wonder-icon wonder-comment" style="margin-left: 20px;"></span></a>'; 
         // This part automatically update itself in the case if the user uses a third party comments plug in like Discuss
     } else {
         $comments = __('Comments are closed');
@@ -85,6 +85,32 @@ function wonder_posted_footer(){
 
     return '<div class="post-footer-container"><div class="row"><div class="col-xs-12 col-sm-6">'.get_the_tag_list('<div class="tags-list"><span class="wonder-icon wonder-price-tag"></span>', ' ', '</div>').'</div><div class="col-xs-12 col-sm-6 text-right">'.$comments.'</div></div></div>';
 }
+
+function wonder_get_attachment() {
+
+    
+    $output = '';
+    if(has_post_thumbnail() ) : 
+        $output = wp_get_attachment_url( get_post_thumbnail_id(get_the_id() ) );
+    else: 
+        $attachments = get_posts(array(
+            'post_type' => 'attachment',
+            'posts_per_page' => 1,
+            'post_parent' => get_the_ID()
+        ) );
+    
+        if($attachments):
+            foreach($attachments as $attachment):
+                $output = wp_get_attachment_url($attachment->ID);
+            endforeach;
+        endif;
+
+        wp_reset_postdata();
+
+    endif;
+    return $output;
+
+};
 
 
 ?>

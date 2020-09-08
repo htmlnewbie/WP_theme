@@ -219,6 +219,7 @@ h1 { font-size: 48px ; font-weight: 400;
 	margin-top: 50px;
 	.entry-header {
 		height: 480px;
+		position: relative;
 		@extend %text-shadow;
 	}
 	h1, .entry-meta, .entry-header{
@@ -233,7 +234,8 @@ h1 { font-size: 48px ; font-weight: 400;
 .entry-excerpt {
 	&.image-caption {
 		@extend %background-gradient;
-		position: absolute; left: 0; bottom: -110px; right: 0;
+		position: absolute; left: 0; bottom: 0px; right: 0;
+		p{ margin: 40px 0;}
 				
 	}
 }
